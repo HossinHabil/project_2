@@ -1,0 +1,93 @@
+.social {
+    padding: 5rem;
+}
+
+.header {
+    margin-bottom: 6rem;
+
+    &-text {
+        font-size: 4rem;
+        font-family: 'Acme', sans-serif;
+        background: linear-gradient(to right bottom, $firstColor, $secondColor);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+
+        @include respond(tab-port-2) {
+            font-size: 3rem;
+        }
+
+        @include respond(phone-1) {
+            font-size: 2.2rem;
+        }
+
+        
+
+        &::before {
+            content: "";
+            background: #7b1798;
+            height: 0.5rem;
+            width: 20rem;
+            margin: 0 auto;
+            display: block;
+            transform: translateY(6.3rem);
+
+            @include respond(tab-port-2) {
+                transform: translateY(6.5rem);
+            }
+
+            @include respond(phone) {
+                transform: translateY(6.5rem);
+            }
+
+            @include respond(phone-1) {
+                transform: translateY(5.4rem);
+            }
+        }
+
+        &::after {
+            content: "";
+            background: #7b1798;
+            height: 1rem;
+            width: 5rem;
+            margin-bottom: 8rem;
+            margin: 0 auto;
+            display: block;
+            transform: translateY(-0.4rem);
+
+            @include respond(tab-port-2) {
+                transform: translateY(1.3rem);
+            }
+
+            @include respond(phone) {
+                transform: translateY(1.3rem);
+            }
+        }
+
+    }
+
+    &-icons {
+        margin-top: 8rem;
+
+        &_img {
+            margin-left: 2rem;
+            transition: ease-in-out;
+
+            @include respond(phone) {
+                width: 45%;
+                margin-bottom: 2rem;
+            }
+
+            @include respond(phone-1) {
+                width: 30%;
+                margin-bottom: 2rem;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    
+}

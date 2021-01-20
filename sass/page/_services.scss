@@ -1,0 +1,160 @@
+.services {
+
+    padding: 5rem;
+
+    &-header {
+        margin-bottom: 6rem;
+
+        &_text {
+            font-size: 4rem;
+            font-family: 'Acme', sans-serif;
+            background: linear-gradient(to right bottom, $firstColor, $secondColor);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+
+            @include respond(tab-port-2) {
+                font-size: 3rem;
+            }
+
+            @include respond(phone) {
+                font-size: 2.5rem;
+            }
+
+            @include respond(phone-2) {
+                font-size: 2rem;
+            }
+
+            &::before {
+                content: "";
+                background: #7b1798;
+                height: 0.5rem;
+                width: 20rem;
+                margin: 0 auto;
+                display: block;
+                transform: translateY(6.3rem);
+
+                @include respond(phone) {
+                    transform: translateY(5.7rem);
+                }
+
+                @include respond(phone-2) {
+                    transform: translateY(5.2rem);
+                }
+            }
+
+            &::after {
+                content: "";
+                background: #7b1798;
+                height: 1rem;
+                width: 5rem;
+                margin-bottom: 4rem;
+                margin: 0 auto;
+                display: block;
+                transform: translateY(0.8rem);
+
+                @include respond(tab-port-2) {
+                    transform: translateY(2rem);
+                }
+
+                @include respond(tab-port-1) {
+                    margin-bottom: 8rem;
+                }
+            }
+        }
+    }
+    
+    &-box {
+        padding: 2rem;
+        margin-bottom: 3rem;
+
+        @include respond(phone) {
+            margin-bottom: 0;
+        }
+
+        &_img {
+            margin-bottom: 3rem;
+
+            @include respond(tab-port-2) {
+                width: 47%;
+            }
+
+            @include respond(tab-port-1) {
+                margin-bottom: 4rem;
+            }
+        }
+
+        &-text {
+
+            font-family: 'Acme', sans-serif;
+        
+            &_head {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+
+                @include respond(tab-port-2) {
+                    font-size: 2.5rem;
+                }
+
+                @include respond(tab-port-1) {
+                    font-size: 3.5rem;
+                }
+
+                @include respond(phone) {
+                    font-size: 2.8rem;
+                }
+            }
+        
+            &_body {
+                font-size: 2rem;
+
+                @include respond(tab-port-2) {
+                    font-size: 1.5rem;
+                }
+
+                @include respond(tab-port-1) {
+                    font-size: 2.5rem;
+                    margin-bottom: 10rem;
+                }
+
+                @include respond(phone) {
+                    font-size: 2.2rem;
+                    margin-bottom: 5rem;
+                }
+
+                @include respond(phone-2) {
+                    font-size: 1.8rem;
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    }
+
+    &-button {
+        padding: 2rem;
+        border-radius: 4rem;
+        font-size: 2.5rem;
+        background: linear-gradient(to right bottom, $firstColor, $secondColor);
+
+        @include respond(tab-port-2) {
+            font-size: 2rem;
+        }
+
+        @include respond(phone) {
+            font-size: 1.5rem;
+        }
+
+        @include respond(phone-2) {
+            font-size: 1.2rem;
+        }
+
+        &:hover {
+            transform: translateY(-1px);
+            color: $secondColor;
+        }
+
+        &:active {
+            transform: translateY(1px);
+        }
+    }
+}

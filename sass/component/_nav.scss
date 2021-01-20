@@ -1,0 +1,66 @@
+#mainNav {
+    padding: 2rem;
+    font-family: 'Acme', sans-serif;
+
+    &.black {
+        transition:.5s ease-in-out;
+        background-color: #8246a1;
+        padding-top: 1rem;
+    }
+
+    @include respond(tab-port-2) {
+        padding: 1.3rem;
+    }
+
+    .navbar-brand {
+        font-size: 3.5rem;
+        font-weight: 600;
+        color: $whiteColor;
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+    }
+
+    .fa-bars {
+        color: $whiteColor;
+        font-size: 3rem;
+    }
+
+    .navbar-nav {
+        font-size: 2.3rem;
+
+        @include respond(big-desktop) {
+            font-size: 3.2rem;
+        }
+
+        .nav-item {
+            margin-left: 2rem;
+
+            @include respond(phone) {
+                text-align: center;
+            }
+
+            @include respond(tab-port-1) {
+                text-align: center;
+            }
+
+            @include respond(tab-land) {
+                text-align: center;
+            }
+
+            .nav-link {
+                color: $whiteColor;
+                font-weight: 600;
+
+                &:active {
+                    transform: translateY(-1px);;
+                }
+
+                &:hover {
+                    color: $secondColor;
+                }
+            }
+        }
+    }
+}

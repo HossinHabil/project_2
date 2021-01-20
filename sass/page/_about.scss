@@ -1,0 +1,198 @@
+.about-us {
+    background: $thirdColor;
+    padding: 6rem;
+    position: relative;
+    height: 100vh;
+
+    .row {
+        margin-top: 8rem;
+
+        @include respond(tab-port-2) {
+            margin-top: 5rem;
+        }
+
+        @include respond(tab-port-1) {
+            position: relative;
+            left: 5rem;
+        }
+    }
+
+    &_title {
+        text-align: center;
+        font-size: 4rem;
+        font-family: 'Acme', sans-serif;
+        background: linear-gradient(to right bottom, $firstColor, $secondColor);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+
+        @include respond(tab-port-2) {
+            font-size: 3rem;
+        }
+
+        @include respond(phone) {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            font-size: 2.5rem;
+        }
+
+        @include respond(phone-2) {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            font-size: 2rem;
+        }
+
+        &::before {
+            content: "";
+            background: #7b1798;
+            height: 0.5rem;
+            width: 20rem;
+            margin: 0 auto;
+            display: block;
+            transform: translateY(6.3rem);
+
+            @include respond(phone) {
+                transform: translateY(5.7rem);
+            }
+
+            @include respond(phone-2) {
+                transform: translateY(5.2rem);
+            }
+        }
+
+        &::after {
+            content: "";
+            background: #7b1798;
+            height: 1rem;
+            width: 5rem;
+            margin-bottom: 4rem;
+            margin: 0 auto;
+            display: block;
+            transform: translateY(0.8rem);
+
+            @include respond(tab-port-2) {
+                transform: translateY(2rem);
+            }
+
+            @include respond(tab-port-1) {
+                margin-bottom: 8rem;
+            }
+        }
+    }
+
+    &-box {
+        position: relative;
+        top: 7rem;
+        font-family: 'Acme', sans-serif;
+        text-align: center;
+
+        @include respond(tab-land) {
+            position: relative;
+            top: 2rem;
+        }
+
+        @include respond(tab-port) {
+            top: 1rem;
+        }
+
+        @include respond(tab-port-2) {
+            top: 3rem;
+        }
+
+        @include respond(tab-port-1) {
+            top: 0;
+            left: -5rem;
+        }
+
+        @include respond(phone) {
+            top: 8rem;
+        }
+    }
+
+    &__head {
+        font-size: 5rem;
+
+        @include respond(tab-land) {
+            font-size: 4.5rem;
+        }
+
+        @include respond(tab-port) {
+            font-size: 3.8rem;
+        }
+
+        @include respond(tab-port-2) {
+            font-size: 3.2rem;
+        }
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+            position: absolute;
+            left: -8rem;
+        }
+    }
+
+    &__list {
+        margin-top: 1rem;
+        font-size: 2.8rem;
+        line-height: 6.5rem;
+
+        @include respond(tab-land) {
+            font-size: 2.4rem;
+        }
+
+        @include respond(tab-port) {
+            font-size: 2.2rem;
+        }
+
+        @include respond(tab-port-2) {
+            font-size: 1.8rem;
+            line-height: 6rem;
+        }
+
+        @include respond(tab-port-1) {
+            font-size: 2rem;
+            line-height: 6rem;
+            list-style: none;
+        }
+
+        @include respond(tab-port-3) {
+            font-size: 1.8rem;
+        }
+
+        @include respond(phone) {
+            font-size: 1.9rem;
+        }
+        
+        @include respond(phone-2) {
+            font-size: 2rem;
+        }
+
+        @include respond(phone-1) {
+            font-size: 1.1rem;
+        }
+    }
+
+    &-img {
+        position: absolute;
+        top: 1.5rem;
+
+        .about-img{
+
+            width: 50rem;
+
+            @include respond(tab-land) {
+                width: 40rem;
+            }
+
+            @include respond(tab-port-2) {
+                width: 36rem;
+            }
+
+            @include respond(tab-port-1) {
+                display: none;
+            }
+        }
+    }
+}

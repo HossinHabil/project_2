@@ -1,0 +1,103 @@
+#header {
+    height: 100vh;
+    background: linear-gradient(to right bottom, $firstColor, $secondColor);
+    background-size: cover;
+    position: relative;
+    height: 102vh;
+
+    @include respond(phone) {
+        height: 100vh;
+    }
+
+    .box {
+        text-align: center;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 45%;
+        left: 50%;
+
+
+        @include respond(big-desktop) {
+            top: 44%;
+        }
+
+        @include respond(tab-land) {
+            top: 50%;
+        }
+
+        @include respond(tab-port-2) {
+            top: 50%;
+        }
+
+        @include respond(phone) {
+            top: 50%;
+        }
+
+        @include respond(phone-x) {
+            width: 50%;
+        } 
+        
+        &_img {
+
+            width: 50%;
+
+            @include respond(big-desktop) {
+                width: 90%;
+            }
+
+            @include respond(tab-land) {
+                width: 60%;
+            }
+
+            @include respond(tab-port-2) {
+                width: 90%;
+            }
+
+            @include respond(tab-port-3) {
+                width: 80%;
+            }
+
+            @include respond(phone) {
+                width: 100%;
+            }  
+        }
+
+        &_text {
+
+            margin-top: 4rem;
+
+            @include respond(phone) {
+                right: 1.5rem;
+                width: 100%;
+            }
+
+            &-1 {
+                font-size: 8rem;
+                color: $whiteColor;
+                font-family: 'Acme', sans-serif;
+
+                @include respond(tab-land) {
+                    font-size: 5.5rem;
+                }
+
+                @include respond(tab-port) {
+                    font-size: 5rem;
+                }
+
+                @include respond(tab-port-2) {
+                    font-size: 3.5rem;
+                }
+
+                @include respond(phone) {
+                    font-size: 2.5rem;
+                }
+
+            }
+        }
+    }
+
+    .bottom-img {
+        position: absolute;
+        bottom: 0;
+    }
+}
